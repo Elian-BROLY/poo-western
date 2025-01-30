@@ -42,7 +42,7 @@ int main()
 	jenny.sePresente();
 
 	cout << endl;
-
+	
 	// 2. ALLONS BOIRE UN COUP
 
 	jenny.changeDeRobe("verte");
