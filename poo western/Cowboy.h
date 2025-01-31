@@ -4,9 +4,9 @@ class Cowboy :
 	public Humain
 {
 private:
-	string nouvelleBoissonFavorite = "whisky";
+
 public:
-	Cowboy(const string nom = "");
+	Cowboy(const string nom, const string boissonFavorite);
 	string getNom();
 	void sePresente();
 };

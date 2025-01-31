@@ -35,7 +35,7 @@ int main()
 
 	// 1. LA RENCONTRE 
 
-	Cowboy lucky("Lucky Luke");
+	Cowboy lucky("Lucky Luke", "whisky");
 	Dame jenny("Jenny");
 
 	lucky.sePresente();

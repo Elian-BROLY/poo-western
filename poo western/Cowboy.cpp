@@ -1,7 +1,7 @@
 #include "Cowboy.h"
 
-Cowboy::Cowboy(const string nom)
-	:Humain(nom)
+Cowboy::Cowboy(const string nom, const string boissonFavorite)
+	:Humain(nom, boissonFavorite)
 {
 }
 
@@ -12,5 +12,5 @@ string Cowboy::getNom()
 
 void Cowboy::sePresente()
 {
-	cout << "(" << nom << ") -- Bonjour, je suis le " << getNom() << " et j'aime " << nouvelleBoissonFavorite << endl;
+	cout << "(" << nom << ") -- Bonjour, je suis le " << getNom() << " et j'aime " << boissonFavorite << endl;
 }
