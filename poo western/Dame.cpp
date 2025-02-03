@@ -5,17 +5,17 @@ Dame::Dame(const string nom, const string boissonFavorite, const string couleurR
 {
 }
 
-string Dame::getNom() const
+string Dame::getNom()
 {
 	return "Miss " + nom;
 }
 
-string Dame::getEtat() const
+string Dame::getEtat()
 {
 	return etat;
 }
 
-void Dame::sePresente() const
+void Dame::sePresente()
 {
 	cout << "(" << nom << ") -- Bonjour, je suis " << getNom() << " et j'ai une jolie robe " << couleurRobe << endl;
 }

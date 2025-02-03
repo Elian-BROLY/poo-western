@@ -1,6 +1,6 @@
-#include <iostream>
+﻿#include <iostream>
 #include <string>
-#include "Humain.h"
+#include "Brigand.h"
 #include "Dame.h"
 #include "Cowboy.h"
 using namespace std;
@@ -8,45 +8,23 @@ using namespace std;
 
 int main()
 {
-	//DEBUT DU TP 
-
-	Humain luck("Lucky Luke", "coca-cola");
-
-	cout << "Une histoire sur " << luck.getNom() << endl;
-	luck.sePresente();
-	luck.boit();
-
-	cout << endl;
-
-	Humain* joe = new Humain("Joe", "eau");
-	cout << "Une histoire sur " << joe->getNom() << endl;
-	joe->setBoissonFavorite("whisky");
-	joe->sePresente();
-	joe->boit();
-
-	cout << endl;
-
-	Dame jen("Jenny");
-	jen.sePresente();
-
-	cout << endl;
-	cout << "-----------------------------------------------------------------------------------------------------------------------" << endl;
-	cout << endl;
-
-	// 1. LA RENCONTRE 
-
-	Cowboy lucky("Lucky Luke", "whisky");
+	Cowboy lucky("Lucky Luke", "coca-cola");
 	Dame jenny("Jenny");
+	Brigand joe("Joe");
 
+	// 1. La rencontre ...
 	lucky.sePresente();
 	jenny.sePresente();
 
-	cout << endl;
-	
-	// 2. ALLONS BOIRE UN COUP
+	// 2. Mais un brigand arrive ...
+	joe.sePresente();
+	joe.kidnappe(jenny);
 
-	jenny.changeDeRobe("verte");
-	lucky.boit();
-	jenny.boit();
+	// 3. Heureusement le cowboy s’interpose ...
+	lucky.sePresente();
+	joe.sePresente();
+	lucky.tire(joe);
+	lucky.emprisonne(joe);
+	lucky.libere(jenny);
 }
 

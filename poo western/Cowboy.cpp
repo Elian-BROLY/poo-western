@@ -1,6 +1,6 @@
 #include "Cowboy.h"
 
-Cowboy::Cowboy(const string nom, const string boissonFavorite)
+Cowboy::Cowboy(const string nom = "", const string boissonFavorite = "whisky", const string qualite = "vaillant")
 	:Humain(nom, boissonFavorite)
 {
 }
