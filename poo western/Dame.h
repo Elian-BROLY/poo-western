@@ -10,14 +10,14 @@ private:
 	string couleurRobe;
 	string etat;
 	void hurle();
-	void remercie(const Cowboy& heros);
+	void remercie(Cowboy& heros);
 public:
-	Dame(const string nom="", const string boissonFavorite = "lait", const string couleurRobe = "blanche");
+	Dame(string nom="", string boissonFavorite = "lait", string couleurRobe = "blanche");
 	string getNom();
 	string getEtat();
 	void sePresente();
 	void seFaitKidnapper();
 	void seFaitLiberer(Cowboy& cowboy);
-	void changeDeRobe(const string couleurRobe);
+	void changeDeRobe(string couleurRobe);
 };
 

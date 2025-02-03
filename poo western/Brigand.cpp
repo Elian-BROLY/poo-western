@@ -2,8 +2,8 @@
 #include "Dame.h"
 #include "Cowboy.h"
 
-Brigand::Brigand(const string nom, const string boissonFavorite, const string comportement)
-	:Humain(nom, boissonFavorite)
+Brigand::Brigand(string nom /*= ""*/, string boissonFavorite /*= "tord-boyaux"*/, string comportement /*= "mechant"*/)
+	:Humain(nom, boissonFavorite), comportement(comportement), nbDamesEnlevees(0), recompense(0), enPrison(false)
 {
 }
 
@@ -24,15 +24,26 @@ int Brigand::getRecompense()
 
 void Brigand::sePresente()
 {
-	cout << "(" << nom << ")--" << "Bonjour, je suis " << getNom() << " le " << getComportement() << " et j'aime le " << getBoissonFavorite() << "." << endl;
+	if (nbDamesEnlevees == 0){
+		cout << "(" << nom << ") -- " << "Bonjour, je suis " << getNom() << " le " << getComportement() << " et j'aime le " << getBoissonFavorite() << "." << endl;
+	}
+	else
+	{
+		cout << "(" << nom << ") -- " << "Bonjour, je suis " << getNom() << " le " << getComportement() << " et j'aime le " << getBoissonFavorite() << "." << endl;
+		cout << "(" << nom << ") -- " << "J'ai l'air " << getComportement() << " et j'ai deja kidnappe " << nbDamesEnlevees << " dame(s) !" << endl;
+		cout << "(" << nom << ") -- " << "Ma tete est mise a prix a " << recompense << "$" << endl;
+	}
 }
 
 void Brigand::kidnappe(Dame& dame)
 {
-	dame.seFaitKidnapper();
-	nbDamesEnlevees++;
-	augmenteRecompense();
-	cout << "(" << nom << ")--" << "Ah ah ! " << dame.getNom() << ", tu es mienne desormais !" << endl;
+	if (!estEnPrison())
+	{
+		dame.seFaitKidnapper();
+		nbDamesEnlevees++;
+		augmenteRecompense();
+		cout << "(" << nom << ") -- " << "Ah ah ! " << dame.getNom() << ", tu es mienne desormais !" << endl;
+	}
 }
 
 void Brigand::seFaitEmprisonne(Cowboy& cowboy)
@@ -40,17 +51,17 @@ void Brigand::seFaitEmprisonne(Cowboy& cowboy)
 	if (!estEnPrison())
 	{
 		enPrison = true;
-		cout << "(" << nom << ")--" << "Damned, je suis fait ! " << cowboy.getNom() << ", tu m'as eu !" << endl;
+		cout << "(" << nom << ") -- " << "Damned, je suis fait ! " << cowboy.getNom() << ", tu m'as eu !" << endl;
 	}
 }
 
-void Brigand::augmenteRecompense(const int prix)
+void Brigand::augmenteRecompense(int prix)
 {
 	if (prix > 0)
 		this->recompense += prix;
 }
 
-void Brigand::diminueRecompense(const int prix)
+void Brigand::diminueRecompense(int prix)
 {
 	if (prix > 0 && prix <= recompense)
 		this->recompense -= prix;

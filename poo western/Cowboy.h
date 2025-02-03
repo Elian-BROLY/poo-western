@@ -11,16 +11,16 @@ private:
 	int popularite;
 	string qualite;
 public:
-	Cowboy(const string nom, const string boissonFavorite, const string qualite);
+	Cowboy(string nom = "", string boissonFavorite = "coca-cola", string qualite = "vaillant");
 	int getPopularite();
-	void setPopularite(const int popularite);
+	void setPopularite(int popularite);
 	string getQualite();
-	void setQualite(const string qualite);
+	void setQualite(string qualite);
 	string getNom();
 	void sePresente();
 	void incrementePopularite();
 	void decrementPopularite();
-	void tire(const Brigand& brigand);
+	void tire(Brigand& brigand);
 	void emprisonne(Brigand& brigand);
 	void libere(Dame& dame);
 };
