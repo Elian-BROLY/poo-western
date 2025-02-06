@@ -8,7 +8,7 @@ void Dame::hurle()
 
 void Dame::remercie(Cowboy& heros)
 {
-	cout << "(" << nom << ")--" << "Merci " << heros.getNom() << ", je suis enfin " << etat << endl;
+	cout << "(" << nom << ") -- " << "Merci " << heros.getNom() << ", je suis enfin " << etat << " !" << endl;
 }
 
 Dame::Dame(string nom, string boissonFavorite, string couleurRobe)
