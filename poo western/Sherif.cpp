@@ -34,5 +34,5 @@ int Sherif::getNbBringandEmprisonne()
 
 void Sherif::respect()
 {
-	cout << "(" << nom << ") -- " << "Recommencez et Respectez moi, On m'appelle Sherif " << getNom() << endl;
+	cout << "(" << nom << ") -- " << "Recommencez, Respectez-moi et Appelez-moi Sherif " << getNom() << endl;
 }
