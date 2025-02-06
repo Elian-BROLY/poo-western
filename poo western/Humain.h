@@ -13,7 +13,7 @@ public:
 	void empty(string);
 	void setBoissonFavorite(const string);
 	string getNom();
-	void sePresente();
+	virtual void sePresente();
 	void boit();
 
 };

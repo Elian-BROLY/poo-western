@@ -151,17 +151,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Barman.cpp" />
     <ClCompile Include="Brigand.cpp" />
     <ClCompile Include="Cowboy.cpp" />
     <ClCompile Include="Dame.cpp" />
     <ClCompile Include="Humain.cpp" />
     <ClCompile Include="poo western.cpp" />
+    <ClCompile Include="Sherif.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Barman.h" />
     <ClInclude Include="Brigand.h" />
     <ClInclude Include="Cowboy.h" />
     <ClInclude Include="Dame.h" />
     <ClInclude Include="Humain.h" />
+    <ClInclude Include="Sherif.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,9 +1,10 @@
 #include "Cowboy.h"
 #include "Dame.h"
 #include "Brigand.h"
+#include "Humain.h"
 
-Cowboy::Cowboy(string nom, string boissonFavorite, string qualite)
-	:Humain(nom, boissonFavorite), qualite(qualite)
+Cowboy::Cowboy(string nom, string boissonFavorite, string qualite, int popularite)
+	:Humain(nom, boissonFavorite), qualite(qualite), popularite(popularite)
 {
 }
 
@@ -66,3 +67,5 @@ void Cowboy::libere(Dame& dame)
 	cout << "** Le " << getQualite() << " " << getNom() << " libere " << dame.getNom() << endl;
 	dame.seFaitLiberer(*this);
 }
+
+

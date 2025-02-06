@@ -3,6 +3,7 @@
 
 class Brigand;
 class Dame;
+class Humain;
 
 class Cowboy :
 	public Humain
@@ -11,7 +12,7 @@ private:
 	int popularite;
 	string qualite;
 public:
-	Cowboy(string nom = "", string boissonFavorite = "coca-cola", string qualite = "vaillant");
+	Cowboy(string nom = "", string boissonFavorite = "coca-cola", string qualite = "vaillant", int popularite = 0);
 	int getPopularite();
 	void setPopularite(int popularite);
 	string getQualite();
