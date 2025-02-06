@@ -1,16 +1,16 @@
 #pragma once
-#include "Humain.h"
+#include "Cowboy.h"
 
 class Brigand;
 
 class Sherif :
-	public Humain
+	public Cowboy
 {
 private:
-	string role;
-	void arret(Brigand& brigand);
+
 public:
-	Sherif(string nom = "", string boissonFavorite = "eau", string role = "Sherif");
-	void sePresente(Brigand& brigand);
+	Sherif(string nom = "", string boissonFavorite = "eau");
+	void sePresente();
+	void arret(Brigand& brigand);
 };
 

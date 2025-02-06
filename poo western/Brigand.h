@@ -3,6 +3,7 @@
 
 class Dame;
 class Cowboy;
+class Sherif;
 
 class Brigand :
 	public Humain

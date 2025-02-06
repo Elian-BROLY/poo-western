@@ -41,5 +41,6 @@ int main()
 	presentezVous(joe);
 	presentezVous(robert);
 	presentezVous(clint);
+	clint.arret(joe);
 }
 
