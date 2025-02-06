@@ -11,9 +11,17 @@ void Sherif::sePresente()
 	cout << "(" << nom << ") -- " << "Bonjour, je suis Sherif " << nom << " et j'aime le " << boissonFavorite << endl;
 }
 
-void Sherif::arret(Brigand& brigand)
+void Sherif::rechercher(Brigand& brigand)
 {
-	brigand.augmenteRecompense();
-	cout << "(" << nom << ") -- " << "** OYEZ OYEZ BRAVE GENS ! ! " << brigand.getRecompense() << "$ a qui arretera " << brigand.getNom() << " mort ou vif ! !" << endl;
+	cout << "** OYEZ OYEZ BRAVE GENS ! ! " << brigand.getRecompense() << "$ a qui arretera " << brigand.getNom() << " mort ou vif ! !" << endl;
+}
+
+void Sherif::emprisonne(Brigand& brigand)
+{
 	brigand.seFaitEmprisonne(*this);
+}
+
+void Sherif::coffrer()
+{
+	cout << "(" << nom << ") -- " << "Au nom de la loi, je vous arrete !" << endl;
 }

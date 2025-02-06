@@ -41,6 +41,8 @@ int main()
 	presentezVous(joe);
 	presentezVous(robert);
 	presentezVous(clint);
-	clint.arret(joe);
+	joe.augmenteRecompense();
+	clint.rechercher(joe);
+	clint.emprisonne(joe);
 }
 

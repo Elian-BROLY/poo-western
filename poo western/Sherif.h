@@ -11,6 +11,8 @@ private:
 public:
 	Sherif(string nom = "", string boissonFavorite = "eau");
 	void sePresente();
-	void arret(Brigand& brigand);
+	void rechercher(Brigand& brigand);
+	void emprisonne(Brigand& brigand);
+	void coffrer();
 };
 
